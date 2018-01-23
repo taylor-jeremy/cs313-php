@@ -1,0 +1,42 @@
+/*Medium Sized Screen - Tablet*/
+@media only screen and (min-width: 600px) {
+
+    header img {
+        max-width: 8em;
+        max-height: 8em;
+    }
+    nav ul {
+        position: relative;
+        margin-left: -2em;
+        padding-left: 0em;
+        background-color: #f0f0f0;
+        top: -5em;
+        left: 2em;
+        margin-bottom: -3.9em;
+        height: 4em;
+        width: 100%;
+    }
+    h1 {
+        margin-left: 5em;
+    }
+
+    /*-----FLEX BOX -----*/
+    .flexItems {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section.content {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+        justify-content:space-between;
+        padding: 0 2%;
+    }
+}
