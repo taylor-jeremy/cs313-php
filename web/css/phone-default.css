@@ -95,6 +95,9 @@ figcaption {
     text-align: center;
     color: #01d1ff;
 }
+span {
+	color: #01d1ff;
+}
 footer {
     width: 100%;
     background-color: #01d1ff;
