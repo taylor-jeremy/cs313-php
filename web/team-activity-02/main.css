@@ -1,0 +1,19 @@
+.container {
+	font-size: 24px;
+}
+
+.container:hover {
+	font-weight: bold;
+}
+
+#first-div {
+	background: #fffccc;
+}
+
+#second-div {
+	background: #bdabcc;
+}
+
+#third-div {
+	background: #675120;
+}
