@@ -51,8 +51,17 @@ session_start();
 				}
 				array_push($_SESSION["choices"], $_POST["vegetable"]);
 			}
+			if(array_key_exists("choices", $_SESSION)) {
+                    echo implode("+", $_SESSION["choices"]);
+                }
+            if(isset($_POST['Submit'])) {
+                    if(array_key_exists("choices", $_SESSION)) {
+                        $expression = implode("+", $_SESSION["choices"]);
+                        eval( '$result = (' . $expression . ');' );
+                        echo "You added" . $result . to your cart;
+                    }
+                }
 		?>
-		<strong>You added <?php echo $_SESSION["choices"]; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
 	</main>
         <p>&copy; <?php echo date("Y"); ?> Jeremy Taylor. All rights reserved.</p>
     </footer>
