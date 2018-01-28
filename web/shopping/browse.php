@@ -39,8 +39,7 @@ session_start();
 		$data = htmlspecialchars($data);
 		return $data;
 	}
-	$products=array("");
-	$_SESSION['choices']=$products;
+	$_SESSION['choice']=$vegetable;
 	?>
 	<header id="page_header">
 		<figure><img src="img/logo.png" alt="logo"></figure> <!-- Logo made with Flower graphic by <a href="undefined">undefined</a> from <a href="https://logomakr.com/">Logomakr</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/6nuXey-->
@@ -67,10 +66,8 @@ session_start();
 		</form>
 
 		<?php
-		array_push($products, $vegetable);
-		print_r($products);
 		echo '<script type="text/javascript">';
-		echo 'alert("You have added " + $vegetable "to your cart")';
+		echo alert("You have added " . $_SESSION["choice"] . "to your cart" . "<br>");
 		echo '</script>';
 		?>
 	</main>
