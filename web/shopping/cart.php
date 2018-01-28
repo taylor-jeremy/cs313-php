@@ -45,11 +45,13 @@ session_start();
 			<input type="submit" name="Submit" value="Add to Cart">
 		</form>
 		<?php
+		$user_arr = array ();
 		if (isset($_POST['Submit'])) {
 			$_SESSION['vegetable'] = $_POST['vegetable'];
+			array_push($user_arr, 'vegetable');
 		}
 		?>
-		<strong>You added <?php echo $_SESSION['vegetable']; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
+		<strong>You added <?php echo $_SESSION[$user_arr]; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
 	</main>
 	<footer>
         <p>&copy; <?php echo date("Y"); ?> Jeremy Taylor. All rights reserved.</p>
