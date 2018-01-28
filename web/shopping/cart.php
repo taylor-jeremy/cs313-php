@@ -52,7 +52,7 @@ session_start();
 		$user_arr = $_SESSION['vegetable'];
 		$_SESSION[$user_arr] = $user_arr;
 		?>
-		<strong>You added <?php echo $_SESSION[$user_arr]; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
+		<strong>You added <?php echo $user_arr; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
 	</main>
 	<footer>
         <p>&copy; <?php echo date("Y"); ?> Jeremy Taylor. All rights reserved.</p>
