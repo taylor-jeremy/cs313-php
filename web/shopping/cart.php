@@ -45,10 +45,10 @@ session_start();
 			<input type="submit" name="Submit" value="Add to Cart">
 		</form>
 		<?php
-		$user_arr = array ();
+		$user_arr = array();
 		if (isset($_POST['Submit'])) {
 			$_SESSION['vegetable'] = $_POST['vegetable'];
-			array_push($user_arr, 'vegetable');
+			$user_arr = $_SESSION['vegetable'];
 		}
 		?>
 		<strong>You added <?php echo $_SESSION[$user_arr]; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
