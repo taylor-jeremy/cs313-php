@@ -1,1 +1,0 @@
-<p>&copy; Jeremy Taylor. All rights reserved.</p>
