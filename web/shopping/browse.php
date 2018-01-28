@@ -66,9 +66,7 @@ session_start();
 		</form>
 
 		<?php
-		echo '<script type="text/javascript">';
-		echo alert("You have added " . $_SESSION["choice"] . "to your cart" . "<br>");
-		echo '</script>';
+		echo print_r($choice);
 		?>
 	</main>
 	<footer>
