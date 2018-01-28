@@ -52,7 +52,7 @@ session_start();
 				array_push($_SESSION["choices"], $_POST["vegetable"]);
 			}
 		?>
-		<strong>You added <?php echo $_SESSION["vegetable"]; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
+		<strong>You added <?php echo $_SESSION["choices"]; ?> to your cart. View your <a href="cart.php">cart</a>.</strong>
 	</main>
         <p>&copy; <?php echo date("Y"); ?> Jeremy Taylor. All rights reserved.</p>
     </footer>
