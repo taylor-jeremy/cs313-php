@@ -52,7 +52,7 @@ session_start();
 </ul>
     </nav>
 	<main>
-		<form method="post" action="">
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			<p>Browse your favorite vegetables here:</p>
 
 			Vegetables:<br />
@@ -62,20 +62,13 @@ session_start();
 			<input type="radio" name="vegetable" value="Squash" id="vegetable-squash"><label for="vegetable-squash">Squash</label><span class="error">* <?php echo $vegetableErr;?></span><br />
 			<br />
 
-			<input name="Submit" type="submit" value="Add to Cart">
+			<input type="submit" value="Add to Cart">
 		</form>
 
 		<?php
-		if (isset($_POST)['Submit'])) {
-			if(isset($_POST['radio'])) {
-				$_SESSION['vegetable'] = $_POST['vegetable'];
-				echo 'Session: '.$_SESSION['vegetable'];
-				echo '<br>';
-				echo 'POST: '.$_POST['vegetable'];
-			}
-		}
+		$_SESSION["choice"] = vegetable;
+		echo "You have added " . $choice . "to your cart."
 		?>
-}
 	</main>
 	<footer>
         <p>&copy; <?php echo date("Y"); ?> Jeremy Taylor. All rights reserved.</p>
