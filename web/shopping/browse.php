@@ -23,6 +23,7 @@ session_start();
 	<?php
 	// define variables and set to empty values
 	$vegetableErr = "";
+	$vegetable = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (empty($_POST["vegetable"])) {
@@ -66,13 +67,15 @@ session_start();
 		</form>
 
 		<?php
+		array_push($products, $vegetable);
+		print_r($products);
 		echo '<script type="text/javascript">';
-		echo 'alert("You have added " + $vegetable to your cart")';
+		echo 'alert("You have added " + $vegetable "to your cart")';
 		echo '</script>';
 		?>
 	</main>
 	<footer>
-        <p>&copy; Jeremy Taylor. All rights reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?> Jeremy Taylor. All rights reserved.</p>
     </footer>
 </body>
 </html>
