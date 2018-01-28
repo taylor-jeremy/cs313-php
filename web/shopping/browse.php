@@ -67,11 +67,12 @@ session_start();
 
 		<?php
 		if (isset($_POST)['Submit'])) {
-			$_SESSION['vegetable'] = $_POST['vegetable'];
-
-		echo 'Session: '.$_SESSION['vegetable'];
-		echo '<br>';
-		echo 'POST: '.$_POST['vegetable'];
+			if(isset($_POST['radio'])) {
+				$_SESSION['vegetable'] = $_POST['vegetable'];
+				echo 'Session: '.$_SESSION['vegetable'];
+				echo '<br>';
+				echo 'POST: '.$_POST['vegetable'];
+			}
 		}
 		?>
 }
