@@ -7,8 +7,8 @@ session_start();
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Cart</title>
-	<meta name="description" content="product cart">
+	<title>Checkout</title>
+	<meta name="description" content="product checkout">
     <meta name="author" content="Jeremy Taylor">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Reset CSS Styles -->
@@ -23,7 +23,7 @@ session_start();
 <body>
 	<header id="page_header">
 		<figure><img src="img/logo.png" alt="logo"></figure> <!-- Logo made with Flower graphic by <a href="undefined">undefined</a> from <a href="https://logomakr.com/">Logomakr</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/6nuXey-->
-		<h1>Cart</h1>
+		<h1>Checkout</h1>
 	</header>
 	<nav>
         <ul id="mainmenu">
