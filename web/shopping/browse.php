@@ -66,6 +66,7 @@ session_start();
 		</form>
 
 		<?php
+		$_SESSION["choice"] = vegetable;
 		echo "You have added " . $choice . "to your cart."
 		?>
 	</main>
