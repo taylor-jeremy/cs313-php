@@ -31,6 +31,13 @@ session_start();
 			$vegetable = test_input($_POST["vegetable"]);
 		}
 	}
+
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
 	$products=array("");
 	$_SESSION['choices']=$products;
 	?>
