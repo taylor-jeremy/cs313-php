@@ -66,7 +66,7 @@ session_start();
 
 		<?php
 		$_SESSION["choice"] = vegetable;
-		echo "You have added " . $choice . "to your cart."
+		echo "You have added " . choice . "to your cart."
 		?>
 	</main>
 	<footer>
