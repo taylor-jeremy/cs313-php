@@ -32,7 +32,7 @@ session_start();
 		</ul>
     </nav>
 	<main>
-		<form method="post" action="">
+		<form action="" method="post">
 			<p>Browse your favorite vegetables here:</p>
 
 			Vegetables:<br />
@@ -45,11 +45,11 @@ session_start();
 			<input type="submit" name="Submit" value="Add to Cart">
 		</form>
 		<?php
-		if (isset($_POST)['Submit']) {
+		if (isset($_POST['Submit'])) {
 			$_SESSION['vegetable'] = $_POST['vegetable'];
 		}
 		?>
-		<strong>You added<?php echo $_SESSION['vegetable'];?> to your cart.</strong>
+		<strong>You added<?php echo $_SESSION['vegetable']; ?> to your cart.</strong>
 	</main>
 	<footer>
         <p>&copy; <?php echo date("Y"); ?> Jeremy Taylor. All rights reserved.</p>
