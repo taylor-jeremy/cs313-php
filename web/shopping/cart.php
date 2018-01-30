@@ -39,7 +39,7 @@ session_start();
 			<input type="radio" name="vegetable" value="Carrot" id="vegetable-carrot"><label for="vegetable-carrot">Carrots</label><br />
 			<input type="radio" name="vegetable" value="Celery" id="vegetable-celery"><label for="vegetable-celery">Celery</label><br />
 			<input type="radio" name="vegetable" value="Cucumber" id="vegetable-cucumber"><label for="vegetable-cucumber">Cucumbers</label><br />
-			<input type="radio" name="vegetable" value="Squash" id="vegetable-squash"><label for="vegetable-squash">Squash</label><span class="error"><br />
+			<input type="radio" name="vegetable" value="Squash" id="vegetable-squash"><label for="vegetable-squash">Squash</label><br />
 			<br />
 
 			<input type="submit" name="Submit" value="Add to Cart">
