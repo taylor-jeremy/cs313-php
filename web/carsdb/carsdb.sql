@@ -1,0 +1,22 @@
+CREATE DATABASE carsdb;
+
+\c carsdb
+
+CREATE TABLE public.driver(
+	id SERIAL NOT NULL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	birthdate VARCHAR(50) NOT NULL,
+	license INT NOT NULL
+);
+
+CREATE TABLE public.car(
+	id SERIAL NOT NULL PRIMARY KEY,
+	year SMALLINT NOT NULL,
+	make VARCHAR(50) NOT NULL,
+	model VARCHAR(50) NOT NULL,
+	color VARCHAR(50) NOT NULL,
+	vin VARCHAR(50) NOT NULL,
+	mileage INT NOT NULL,
+	driver_id INT NOT NULL REFERENCES public.driver(id)
+);

@@ -46,6 +46,7 @@ session_start();
 		</form>
 		<?php
 		if (isset($_POST['Submit'])) {
+            if (isset($_POST['vegetable']))
 			$_SESSION['vegetable'] = $_POST['vegetable'];
 		}
 		?>
