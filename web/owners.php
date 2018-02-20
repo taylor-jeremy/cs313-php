@@ -12,7 +12,7 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Car and Driver List</title>
+	<title>Car List: View, Insert, Update, Delete</title>
 </head>
 
 <body>
@@ -20,10 +20,10 @@ $db = get_db();
 
 <h1>Driver Information</h1>
     
-<p>This page demonstrates the successful creation of the cars database. See who the drivers are below.</p>
+<p>Here are the drivers along with their cars. You can also insert, update, and delete data.</p>
 
 <?php
-$statement = $db->prepare("SELECT first_name, last_name, birthdate, license FROM driver");
+$statement = $db->prepare("SELECT first_name, last_name FROM driver; SELECT year, make, model FROM car WHERE car.driver_id = driver.id;");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -32,8 +32,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	// row, and we can access the different values based on their
 	// name
 	echo '<p>';
-	echo '<strong>' . $row['first_name'] . ' ' . $row['last_name'] . ' ';
-	echo $row['birthdate'] . '</strong>'  . ' ' . $row['license'];
+	echo '<strong>' . $row['first_name'] . ' ' . $row['last_name'] . ' drives a ' . $row['year'];
+	echo ' ' . $row['make'] . $row['model'];
 	echo '</p>';
 }
 ?>
