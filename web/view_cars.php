@@ -18,7 +18,9 @@ $db = get_db();
 <body>
 <div>
 
-<h1>Car and Driver Information</h1>
+<h1>Driver Information</h1>
+    
+<p>>This page demonstrates the successful creation of the cars database. See who the drivers are below.</p>
 
 <?php
 $statement = $db->prepare("SELECT first_name, last_name, birthdate, license FROM driver");
@@ -30,11 +32,13 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	// row, and we can access the different values based on their
 	// name
 	echo '<p>';
-	echo '<strong>' . $row['first_name'] . ' ' . $row['last_name'];
-	echo $row['birthdate'] . '</strong>' . $row['license'];
+	echo '<strong>' . $row['first_name'] . ' ' . $row['last_name'] . ' ';
+	echo $row['birthdate'] . '</strong>'  . ' ' . $row['license'];
 	echo '</p>';
 }
 ?>
+    
+    <p>To see the cars and their owners, please visit the <a href="owners.php">next page</a>.</p>
 
 
 </div>
