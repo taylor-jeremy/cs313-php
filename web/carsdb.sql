@@ -1,4 +1,4 @@
-CREATE DATABASE carsdb;
+/*CREATE DATABASE carsdb;*/
 
 CREATE TABLE public.driver(
 	id SERIAL NOT NULL PRIMARY KEY,
